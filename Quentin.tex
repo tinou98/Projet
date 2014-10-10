@@ -1,0 +1,69 @@
+\documentclass[a4paper, 12pt, landscape]{article}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[francais]{babel}
+
+\usepackage[top=1cm, bottom=1cm, left=1cm , right=1cm]{geometry}
+
+\usepackage[raccourcis]{FAST}
+
+\begin{document}
+	\pagestyle{empty}
+	
+	\definecolor{FASTCouleurFondFS}{rgb}{0.89,0.96,1}
+	\definecolor{FASTCouleurFondFT}{rgb}{1,0.96,0.89}
+	\definecolor{FASTCouleurFondST}{rgb}{1,1,1}
+
+	\renewcommand{\FASTLargeurBoite}	{15em}
+	\renewcommand{\FASTEspaceColonne}	{17em}
+	\renewcommand{\FASTHauteurBoite}	{2.5em}
+	\renewcommand{\FASTInterligne}	{1em}
+	\renewcommand{\FASTDecalageTrait}	{-1.25em}
+	
+	\renewcommand{\FASTFStexteStyle}	{\LARGE \selectfont \bfseries}
+	\renewcommand{\FASTFTtexteStyle}	{\Large}
+	\renewcommand{\FASTSTtexteStyle}	{\itshape \large}
+
+	\begin{figure}[p]
+		\begin{FAST}{Aligner avec le pont}
+			\FT{Detecter} {
+				 \ST{Laser +\\Capteur de luminosité}
+				 \ST{LED +\\Capteur de Luminosité}
+				 \ST{Ligne au Sol +\\Capteur de couleur}
+			}
+			\FT{Analyser \& Controler} {
+				 \ST{Microcontroleur}
+				 \ST{Interface de puissance}
+			}
+		\end{FAST}
+\FASTReset	
+		\begin{FAST}{Gerer l'énnergie}
+			\FT{Afficher le niveau d'ennergie} {
+				\ST{Afficheur 7-segment}
+				\ST{Ecran LCD}
+				\ST{Barre de LED}
+			}
+			\FT{Vérifier avant toute action} {
+				\ST{Micro-controleur}
+			}
+		\end{FAST}
+\FASTReset	
+		\begin{FAST}{Controler}
+			{
+				\FT{Donner des ordres} {
+					\ST{Micro-controleur}
+				}
+				
+				\FT{Acquérir les informations} {
+					\FT{Capteur} {
+						\ST{Capteur de lumière}
+						\ST{Capteur distance}
+					}
+				}
+			}
+		}
+		\end{FAST}
+	\end{figure}
+\FASTReset
+\end{document}
