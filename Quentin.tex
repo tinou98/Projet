@@ -11,59 +11,67 @@
 \begin{document}
 	\pagestyle{empty}
 	
-	\definecolor{FASTCouleurFondFS}{rgb}{0.89,0.96,1}
-	\definecolor{FASTCouleurFondFT}{rgb}{1,0.96,0.89}
+	\definecolor{FASTCouleurFondFS}{rgb}{.9,.8,.8}
+	\definecolor{FASTCouleurFondFT}{rgb}{.8,.8,.9}
 	\definecolor{FASTCouleurFondST}{rgb}{1,1,1}
 
-	\renewcommand{\FASTLargeurBoite}	{15em}
-	\renewcommand{\FASTEspaceColonne}	{17em}
+	\renewcommand{\FASTLargeurBoite}	{14em}
+	\renewcommand{\FASTEspaceColonne}	{16.5em}
 	\renewcommand{\FASTHauteurBoite}	{2.5em}
 	\renewcommand{\FASTInterligne}	{1em}
 	\renewcommand{\FASTDecalageTrait}	{-1.25em}
+	\renewcommand{\FASTEpaisseurTraits}	{.1em}
 	
 	\renewcommand{\FASTFStexteStyle}	{\LARGE \selectfont \bfseries}
 	\renewcommand{\FASTFTtexteStyle}	{\Large}
-	\renewcommand{\FASTSTtexteStyle}	{\itshape \large}
+	\renewcommand{\FASTSTtexteStyle}	{\itshape \large \bfseries}
 
-	\begin{figure}[p]
 		\begin{FAST}{Aligner avec le pont}
 			\FT{Detecter} {
-				 \ST{Laser +\\Capteur de luminosité}
-				 \ST{LED +\\Capteur de Luminosité}
-				 \ST{Ligne au Sol +\\Capteur de couleur}
+				\FT{Acquérir les données grace aux capteurs} {
+					 \ST{Laser +\\Capteur de luminosité}
+					 \ST{LED +\\Capteur de Luminosité}
+					 \ST{Ligne au Sol +\\Capteur de couleur}
+				}
 			}
 			\FT{Analyser \& Controler} {
-				 \ST{Microcontroleur}
-				 \ST{Interface de puissance}
+				 \FT{Transformer les informations} {
+				 	\ST{Microcontroleur}
+					 \ST{Interface de puissance}
+				}
 			}
 		\end{FAST}
-\FASTReset	
+%\newpage
+
 		\begin{FAST}{Gerer l'énnergie}
-			\FT{Afficher le niveau d'ennergie} {
-				\ST{Afficheur 7-segment}
-				\ST{Ecran LCD}
-				\ST{Barre de LED}
+			\FT{Dialoguer avec l'utilisateur} {
+				\FT{Afficher le\\niveau d'ennergie} {
+					\ST{Afficheur 7-segment}
+					\ST{Ecran LCD}
+					\ST{Barre de LED}
+				}
 			}
-			\FT{Vérifier avant toute action} {
-				\ST{Micro-controleur}
-			}
-		\end{FAST}
-\FASTReset	
-		\begin{FAST}{Controler}
-			{
-				\FT{Donner des ordres} {
+			\FT{Securiser l'appareil} {
+				\FT{Vérifier avant toute action} {
 					\ST{Micro-controleur}
 				}
-				
-				\FT{Acquérir les informations} {
-					\FT{Capteur} {
-						\ST{Capteur de lumière}
-						\ST{Capteur distance}
-					}
+			}
+		\end{FAST}
+	
+%\newpage
+
+		\begin{FAST}{Controler}
+			\FT{Donner des ordres} {
+				\FT{} {
+					\ST{Micro-controleur}
 				}
 			}
-		}
+			
+			\FT{Acquérir les informations} {
+				\FT{Capteur} {
+					\ST{Capteur de lumière}
+					\ST{Capteur distance}
+				}
+			}
 		\end{FAST}
-	\end{figure}
-\FASTReset
 \end{document}
