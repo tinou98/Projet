@@ -1,19 +1,15 @@
 // SourceBoost Linker Function Resource Usage Dump
 
-#GLOBAL:"global",line = 0,ram = 41.0,rom = 0;
-FCM_initLed(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 740,ram = 1.0,rom = 80;
-FCM_showBattLevel(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 819,ram = 2.0,rom = 314;
-FCM_getBat(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1075,ram = 2.0,rom = 14;
-FCM_isBattLevelOK(unsigned char):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1042,ram = 4.0,rom = 32;
-FCD_ADC0_ReadAsByte(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 358,ram = 1.0,rom = 10;
-FCM_getTrou(signed short):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1094,ram = 10.0,rom = 120;
-FCD_ADC0_SampleADC(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 234,ram = 2.0,rom = 56;
-FCD_PWM0_Enable(unsigned char):"P:\SI\Projet\FlowCode\BattLevel.c",line = 499,ram = 0.0,rom = 30;
-FCD_PWM0_Disable(unsigned char):"P:\SI\Projet\FlowCode\BattLevel.c",line = 566,ram = 0.0,rom = 16;
-FCD_PWM0_SetDutyCycle(unsigned char,unsigned char):"P:\SI\Projet\FlowCode\BattLevel.c",line = 609,ram = 0.0,rom = 20;
-main(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1143,ram = 0.0,rom = 162;
-interrupt(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1267,ram = 0.0,rom = 34;
+#GLOBAL:"global",line = 0,ram = 53.0,rom = 0;
+FCM_getTrouState(unsigned char):"P:\SI\Projet\FlowCode\BattLevel.c",line = 2636,ram = 5.0,rom = 134;
+FCD_ADC2_ReadAsByte(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1011,ram = 1.0,rom = 10;
+FCD_ADC3_ReadAsByte(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1228,ram = 1.0,rom = 10;
+FCD_ADC2_SampleADC(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 887,ram = 2.0,rom = 56;
+FCD_ADC3_SampleADC(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1104,ram = 2.0,rom = 56;
+FCD_Stepper0_IncrementStep(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1312,ram = 1.0,rom = 70;
+FCD_Stepper0_EnableMotor(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 1516,ram = 0.0,rom = 22;
+main(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 2772,ram = 0.0,rom = 66;
+interrupt(void):"P:\SI\Projet\FlowCode\BattLevel.c",line = 3370,ram = 0.0,rom = 34;
 delay_ms(unsigned char):"NoSourceFile",line = 0,ram = 0.0,rom = 132;
-delay_s(unsigned char):"NoSourceFile",line = 0,ram = 1.0,rom = 38;
-_startup(void):"NoSourceFile",line = 0,ram = 0.0,rom = 74;
-#HEAP_BLOCK: 0, 52, 1996;
+_startup(void):"NoSourceFile",line = 0,ram = 0.0,rom = 110;
+#HEAP_BLOCK: 0, 60, 1988;
