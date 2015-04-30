@@ -187,9 +187,9 @@ gbl_FCV_ARRIERE                  EQU	0x00000030 ; bytes:1
 gbl_FCV_AVANT                    EQU	0x00000031 ; bytes:1
 gbl_FCV_TRUE                     EQU	0x00000032 ; bytes:1
 gbl_FCV_FALSE                    EQU	0x00000033 ; bytes:1
-gbl_Stepper_263108_pattern       EQU	0x00000005 ; bytes:8
-gbl_Stepper_263108_phase         EQU	0x00000034 ; bytes:1
-gbl_Stepper_263108_enabled       EQU	0x00000035 ; bytes:1
+gbl_Stepper_328444_pattern       EQU	0x00000005 ; bytes:8
+gbl_Stepper_328444_phase         EQU	0x00000034 ; bytes:1
+gbl_Stepper_328444_enabled       EQU	0x00000035 ; bytes:1
 CompTempVarRet2201               EQU	0x0000003A ; bytes:1
 FCM_getTro_00042_arg_FCL_NB      EQU	0x00000036 ; bytes:1
 FCM_getTro_00042_1_FCL_VAL       EQU	0x00000037 ; bytes:1
@@ -456,7 +456,7 @@ label21
 FCD_Steppe_0005C
 ; { FCD_Stepper0_EnableMotor ; function begin
 	MOVLW 0x01
-	MOVWF gbl_Stepper_263108_enabled
+	MOVWF gbl_Stepper_328444_enabled
 	BCF gbl_trisd,0
 	BCF gbl_portd,0
 	BCF gbl_trisd,1
@@ -471,16 +471,16 @@ FCD_Steppe_0005C
 	ORG 0x000009B0
 FCD_Steppe_0005A
 ; { FCD_Stepper0_IncrementStep ; function begin
-	MOVF gbl_Stepper_263108_enabled, F
+	MOVF gbl_Stepper_328444_enabled, F
 	BTFSC STATUS,Z
 	RETURN
-	INCF gbl_Stepper_263108_phase, W
-	MOVWF gbl_Stepper_263108_phase
+	INCF gbl_Stepper_328444_phase, W
+	MOVWF gbl_Stepper_328444_phase
 	MOVLW 0x07
-	ANDWF gbl_Stepper_263108_phase, F
-	LFSR 0x00, gbl_Stepper_263108_pattern
+	ANDWF gbl_Stepper_328444_phase, F
+	LFSR 0x00, gbl_Stepper_328444_pattern
 	MOVF FSR0L, W
-	MOVF gbl_Stepper_263108_phase, W
+	MOVF gbl_Stepper_328444_phase, W
 	ADDWF FSR0L, F
 	MOVF INDF0, W
 	MOVWF FCD_Steppe_0005A_1_pattern_now
@@ -540,7 +540,7 @@ main
 	CALL FCD_Steppe_0005C
 label29
 	CALL FCD_Steppe_0005A
-	MOVLW 0x32
+	MOVLW 0x14
 	MOVWF delay_ms_00000_arg_del
 	CALL delay_ms_00000
 	BRA	label29
@@ -588,23 +588,23 @@ _startup
 	CLRF gbl_float_exception_flags
 	CLRF gbl_float_detect_tininess
 	MOVLW 0x09
-	MOVWF gbl_Stepper_263108_pattern
+	MOVWF gbl_Stepper_328444_pattern
 	MOVLW 0x01
-	MOVWF gbl_Stepper_263108_pattern+D'1'
+	MOVWF gbl_Stepper_328444_pattern+D'1'
 	MOVLW 0x05
-	MOVWF gbl_Stepper_263108_pattern+D'2'
+	MOVWF gbl_Stepper_328444_pattern+D'2'
 	MOVLW 0x04
-	MOVWF gbl_Stepper_263108_pattern+D'3'
+	MOVWF gbl_Stepper_328444_pattern+D'3'
 	MOVLW 0x06
-	MOVWF gbl_Stepper_263108_pattern+D'4'
+	MOVWF gbl_Stepper_328444_pattern+D'4'
 	MOVLW 0x02
-	MOVWF gbl_Stepper_263108_pattern+D'5'
+	MOVWF gbl_Stepper_328444_pattern+D'5'
 	MOVLW 0x0A
-	MOVWF gbl_Stepper_263108_pattern+D'6'
+	MOVWF gbl_Stepper_328444_pattern+D'6'
 	MOVLW 0x08
-	MOVWF gbl_Stepper_263108_pattern+D'7'
-	CLRF gbl_Stepper_263108_phase
-	CLRF gbl_Stepper_263108_enabled
+	MOVWF gbl_Stepper_328444_pattern+D'7'
+	CLRF gbl_Stepper_328444_phase
+	CLRF gbl_Stepper_328444_enabled
 	GOTO	main
 	ORG 0x00000AA6
 interrupt
