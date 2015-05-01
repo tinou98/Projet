@@ -35,7 +35,7 @@ Register usage
 Address  Bit Lengh Bit Mask   Unique Name                      Name
 -------  --------- --------   -----------                      ----
 00000001:00000020             Int1Context                      Int1Context
-00000005:00000040             gbl_Stepper_263108_pattern       Stepper_263108_pattern
+00000005:00000040             gbl_Stepper_328444_pattern       Stepper_328444_pattern
 0000000D:00000020             gbl_16_LSR                       LSR
 00000011:00000020             gbl_17_gbl_aSig                  gbl_aSig
 00000015:00000020             gbl_17_gbl_bSig                  gbl_bSig
@@ -59,8 +59,8 @@ Address  Bit Lengh Bit Mask   Unique Name                      Name
 00000031:00000008             gbl_FCV_AVANT                    FCV_AVANT
 00000032:00000008             gbl_FCV_TRUE                     FCV_TRUE
 00000033:00000008             gbl_FCV_FALSE                    FCV_FALSE
-00000034:00000008             gbl_Stepper_263108_phase         Stepper_263108_phase
-00000035:00000008             gbl_Stepper_263108_enabled       Stepper_263108_enabled
+00000034:00000008             gbl_Stepper_328444_phase         Stepper_328444_phase
+00000035:00000008             gbl_Stepper_328444_enabled       Stepper_328444_enabled
 00000036:00000008             delay_ms_00000_arg_del           del
 00000037:00000008             FCM_getTro_00042_1_FCL_VAL       FCL_VAL
 00000038:00000008             FCM_getTro_00042_1_FCL_TRIG      FCL_TRIG
